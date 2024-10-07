@@ -2,8 +2,16 @@ import express from 'express';
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Server is ready');
+app.get('/api/signup', (req, res) => {
+  res.send('Signup route');
+});
+
+app.get('/api/login', (req, res) => {
+    res.send('Login route');
+});
+
+app.get('/api/logout', (req, res) => {
+    res.send('Logout route');
 });
 
 app.listen(5000, () => {
